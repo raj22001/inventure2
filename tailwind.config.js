@@ -14,6 +14,12 @@ export default {
       screens: {
         mobile: "250px",
       },
+      fontSize: {
+        getSize: "3rem",
+      },
+      lineHeight: {
+        gapline: "2",
+      },
     },
   },
   plugins: [

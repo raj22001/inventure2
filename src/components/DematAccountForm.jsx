@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import formbackgroundimage from "../assets/dematbg.png";
+import formbackgroundimage from "../assets/dematbg2.png";
 import toast, { Toaster } from "react-hot-toast";
 import { useFormik } from "formik";
 import * as yup from "yup";
@@ -72,10 +72,10 @@ const DematAccountForm = () => {
       }
 
       try {
-      
+
         const url = import.meta.env.VITE_REACT_APP_BASE_URL;
 
-        console.log({url})
+        console.log({ url })
 
         const payload = {
           Name: values.name,

@@ -224,3 +224,8 @@ html {
    color: purple;
    border-bottom: 2px solid purple;
 }
+
+
+.check {
+   line-height: 2;
+}
