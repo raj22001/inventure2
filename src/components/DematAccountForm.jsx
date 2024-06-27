@@ -89,7 +89,7 @@ const DematAccountForm = () => {
         const response = await axios.post(url, payload);
 
 
-        toast.success(response?.data?.message)
+        toast.success("Form Submitted Success")
         generateCaptcha();
         resetForm();
         setCaptchaError("");
