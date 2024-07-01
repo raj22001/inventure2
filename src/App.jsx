@@ -1,17 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import InventureLandingPage from './components/InventureLandingPage'
+// src/App.jsx
+import React, { useEffect } from 'react';
+import { useLocation, Route, Routes } from 'react-router-dom';
+import InventureLandingPage from './components/InventureLandingPage';
+import { initFacebookPixel, trackPageView } from './utils/fbPixel';
+
+const PageTracker = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    trackPageView();
+  }, [location]);
+
+  return null;
+};
 
 function App() {
-  const [count, setCount] = useState(0)
+  useEffect(() => {
+    initFacebookPixel();
+  }, []);
 
   return (
     <>
-      <InventureLandingPage />
+      <PageTracker />
+      <Routes>
+        <Route path="/" element={<InventureLandingPage />} />
+        {/* Add more routes here as needed */}
+      </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

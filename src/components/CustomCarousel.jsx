@@ -60,12 +60,15 @@ function CustomCarousel({ children }) {
     >
       {children.map((item, index) => {
         return (
-          <div
+         <a
+            href={"https://play.google.com/store/apps/details?id=com.wave.inventuregrowth"}
+            target="_blank"
+            rel="noopener noreferrer"
             className={"slider__item slider__item-active-" + (activeIndex + 1)}
             key={index}
           >
             {item}
-          </div>
+          </a>
         );
       })}
 
