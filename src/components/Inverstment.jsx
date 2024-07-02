@@ -56,7 +56,7 @@ const Inverstment = () => {
         <div className='mt-5 '>
             <div className='md:flex md:flex-row md:h-auto mobile:flex-col sm:flex-col w-full md:justify-between items-center'>
              <h1 className='lg:h-[50px] md:h-[80px]  check font-medium overflow-y-clip mobile:text-3xl sm:text-3xl md:text-getSize leading-gapline'>
-  Get Everything under one Roof 
+  Get Everything Under One Roof 
 </h1>
               <div className='mt-2 flex pr-[2%]'>
                 <p  onClick={handlePrev} className='p-3 bg-white mr-4 cursor-pointer rounded-md'>
