@@ -95,7 +95,9 @@ const DematAccountForm = () => {
         setCaptchaError("");
         setCaptchaInput("");
 
-        triggerFacebookLeadEvent();
+         fbq('track', 'Lead');
+
+        // triggerFacebookLeadEvent();
       } catch (error) {
         console.error("Form submission error", error);
 
@@ -103,12 +105,12 @@ const DematAccountForm = () => {
     },
   });
 
-  const triggerFacebookLeadEvent = () => {
-    const script = document.createElement("script");
-    script.innerHTML = `fbq('track', 'Lead');`;
-    document.body.appendChild(script);
-  };
-  
+  // const triggerFacebookLeadEvent = () => {
+  //   const script = document.createElement("script");
+  //   script.innerHTML = `fbq('track', 'Lead');`;
+  //   document.body.appendChild(script);
+  // };
+
   return (
     <div
       className="w-full h-auto  md:h-[750px]  md:mb-14 sm:mb-0 mobile:mb-0"
