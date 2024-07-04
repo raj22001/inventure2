@@ -73,23 +73,29 @@ const DematAccountForm = () => {
 
       try {
 
-        const url = import.meta.env.VITE_REACT_APP_BASE_URL;
+        const url = '/api/superfone/webhook/integration/L9IdPFhPnoUvQEVeobLgL5VQh_Zpnc';
 
-        console.log({ url })
+        // console.log({ url })
 
         const payload = {
-          Name: values.name,
-          Email: values.dematEmail,
-          Mobile: values.phoneNumber,
-          Pagename: "Landing",
+          first_name: values.name,
+          last_name:"",
+          email: [values.dematEmail],
+          additional_info:"Demat Account Opening",
+          phones: [
+            {
+              phone:values.phoneNumber,
+            }
+          ] ,
         };
 
-        console.log("payload", payload);
+        // console.log("payload", payload);
 
         const response = await axios.post(url, payload);
 
+        console.log({response})
 
-        toast.success("Form Submitted Success")
+        toast.success("form submitted successfully")
         generateCaptcha();
         resetForm();
         setCaptchaError("");
